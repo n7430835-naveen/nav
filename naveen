@@ -1,0 +1,22 @@
+#include <graphics.h>
+#include <conio.h>
+#include <stdio.h>
+
+int main() {
+    // Initialize graphics driver and mode
+    int gd = DETECT, gm;
+    initgraph(&gd, &gm, "");
+    int x = getmaxx() / 2;
+    int y = getmaxy() / 2;
+    setcolor(RED);
+    circle(x, y, 30);
+    setcolor(GREEN);
+    circle(x, y, 50);
+    setcolor(YELLOW);
+    circle(x, y, 70);
+    setcolor(BLUE);
+    circle(x, y, 90);
+    getch();
+    closegraph();
+    return 0;
+}
